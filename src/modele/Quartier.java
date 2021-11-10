@@ -10,17 +10,22 @@ package modele;
  *
  */
 public class Quartier {
-	public static final String[] TYPE_QUARTIER = {"RELIGIEUX","MILITAIRE","NOBLE","COMERCANT","MERVEILLE"};
+	public static final String[] TYPE_QUARTIERS = {"RELIGIEUX","MILITAIRE","NOBLE","COMERCANT","MERVEILLE"};
 	private String nom;
 	private String type;
 	private int coutConstruction;
 	private String caracteristiques;
 	
-	public Quartier(String nom, String type, int coutConstruction, String caracteristiques) {
+	
+	
+	public Quartier() {
 		super();
+	}
+
+	public Quartier(String nom, String type, int coutConstruction, String caracteristiques) {
 		this.setNom(nom);
 		this.setType(type);
-		this.setCoutConstruction(coutConstruction);
+		this.setCout(coutConstruction);
 		this.setCaracteristiques(caracteristiques);
 	}
 
@@ -37,18 +42,18 @@ public class Quartier {
 	}
 	
 	public void setType(String type) {
-		for (int i = 0; i < TYPE_QUARTIER.length; i++) {
-			if(TYPE_QUARTIER[i].equals(type))
+		for (int i = 0; i < TYPE_QUARTIERS.length; i++) {
+			if(TYPE_QUARTIERS[i].equals(type))
 				this.type = type;
 		}
 		this.type = "";
 	}
 	
-	public int getCoutConstruction() {
+	public int getCout() {
 		return coutConstruction;
 	}
 	
-	public void setCoutConstruction(int coutConstruction) {
+	public void setCout(int coutConstruction) {
 		if(coutConstruction >= 1 && coutConstruction <= 6)
 			this.coutConstruction = coutConstruction;
 		else
