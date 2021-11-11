@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Collections;
 public class Pioche
 {
 	private LinkedList <Quartier> listPioche = new LinkedList(); /* */
