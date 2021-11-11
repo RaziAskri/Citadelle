@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Collections;
 public class Pioche
 {
 	private LinkedList <Quartier> listPioche = new LinkedList(); /* */
@@ -32,11 +33,8 @@ public class Pioche
 		return listPioche.size();
 	}
 	
-	public LinkedList melanger() 
+	public void melanger() 
 	{
-		Random generateur = new Random();
-		int i = generateur.nextInt(listPioche.size());
-		int j = generateur.nextInt(listPioche.size());
-
+		 Collections.reverse(listPioche);
 	}
 }
