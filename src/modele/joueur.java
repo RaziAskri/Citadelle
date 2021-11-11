@@ -1,6 +1,11 @@
 package modele;
 import java.util.*;
 
+/*
+ * @author Razi Askri
+ * @edit 10/11/2021
+ */
+
 public class Joueur {
 	
 	
